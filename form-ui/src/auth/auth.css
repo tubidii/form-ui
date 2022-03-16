@@ -1,0 +1,88 @@
+@media screen and (min-width: 650px) {
+
+    body{
+        
+}
+    .bodyContainer{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 40px;
+        display: flex;
+        width: 80%;
+        height: 80vh;
+        border-style:  groove;
+        border-width: 0.5px;
+        border-radius: 10px;
+        box-shadow: rgba(7, 72, 146, 0.56) 0px 22px 70px 4px;}
+    #logo_image{
+        width: 100%;
+       
+       
+        margin-right: 20%;
+    }
+    #title{
+        display: none;
+    }
+    .logo{
+        
+        width: 50%;
+    }
+    .Input{
+        background-color: white;
+        width: 50%;
+        
+       padding-left: 10%;
+       padding-right: 20%;
+
+
+    }
+    #login-btn{
+        background-color: #2e3b6d;
+        width: 40%;
+        margin-top: 10px;
+    }
+    #words{
+        font-size: x-small;
+    }
+    }
+@media screen and (max-width: 650px) {
+    /* phones */
+    body{
+        
+}
+    .bodyContainer{
+        display: block;
+        }
+    #logo_image{
+        width: 200px;
+        margin-left: 20%;
+        margin-right: auto;
+    }
+    #title{
+        display: none;
+    }
+    .logo{
+        height: 170px;
+        
+    }
+    .Input{
+        margin-top: 10px;
+       margin-left: 20%;
+       margin-right: 20%;
+       padding: 20px;
+       box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    
+
+    }
+    #login-btn{
+        background-color: aqua;
+        width: 40%;
+        margin-top: 10px;
+    }
+    #words{
+        font-size: x-small;
+    }
+    }
+    
+
+    
