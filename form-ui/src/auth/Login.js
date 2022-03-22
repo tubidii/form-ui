@@ -11,6 +11,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import Logo from '../assets/Tabletlogin-rafiki.png';
 import Button from '@mui/material/Button';
 import './auth.css';
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 
 async function loginUser(credentials) {
@@ -39,43 +41,19 @@ function Sidebar() {
 }
 
 function InputWithIcon({ setToken}) {
-     
-   const [username, setUserName] = useState();
-   const [password, setPassword] = useState();
-   const [errors, setErrors] = useState(false);
-   const [submit, setSubmit] = useState(false);
+     const [username, setUsername] = useState('');
+     const [password, setPassword] = useState('');
 
-   const handleSubmit = async e =>{
-       e.preventDefault();
-       if (username == '' || password == ''){
-        setErrors(true);
-        
-    } else{
-        setErrors(false);
-        setSubmit(true);
-    }
-       const token = await loginUser({
-           username,
-           password
-       });
-       setToken(token);
-   };
-
-   const errorMessages = () =>{
-      
-       return (
-           <div className='error-wrappers' style={ {display: errors ? '': 'none' }}>
-               <div>
-                   <h3>Please enter all details!!</h3>
-               </div>
-               </div>
-       )
-   }
-
-
+     function validateForm() {
+         return username.length > 0 && password.length > 0;
+     }
+     function handleSubmit(e) {
+         e.preventDefault();
+     }
+   
     return (
         <div className='Input'>
-            <div>{ errorMessages()}</div>
+            <div></div>
 
             <Box sx={{ '& > :not(style)': { m: 1 } }}>
                 <form onSubmit={handleSubmit}>
@@ -92,7 +70,10 @@ function InputWithIcon({ setToken}) {
                                     <AccountCircle />
                                 </InputAdornment>
                             }
-                            onChange = {e => setUserName(e.target.value) }
+                            type = "username"
+                            value = { username}
+                            onChange = { (e) => setUsername(e.target.value)}
+                            
                         />
                     </FormControl>
                 </div>
@@ -109,12 +90,14 @@ function InputWithIcon({ setToken}) {
                                     <PasswordIcon />
                                 </InputAdornment>
                             }
-                            onChange = {e => setPassword(e.target.value)}
+                            value = {password}
+                            onChange = { (e) => setPassword(e.target.value)}
+                            
                         />
                     </FormControl>
                 </div>
                 <div id="btns">
-                    <Button id='login-btn' variant="contained">Log In</Button>
+                    <Link to = "/"style={{textDecoration:'none'}}><Button id='login-btn' variant="contained" disabled = {!validateForm()}>Log In</Button></Link>
                     <Button style={{ marginTop: '10px', marginLeft: '5px' }} variant="outlined">Sign up</Button>
                 </div>
                 <p style={{ fontSize: 'x-small' }}> <a href='#' style={{ color: 'red' }}>Forgot password?</a></p>
