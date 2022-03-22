@@ -53,7 +53,7 @@ function TopInfoSection() {
           </Grid>
           <Grid item xs={6}>
             <Box sx={{paddingX: "10rem"}}>
-              <img alt={""} id="storyset" style={{width: "100%"}} src={'/assets/travellers.png'}/>
+              <img alt={""} id="storyset" style={{width: "100%"}} src={'/assets/test-svg.svg'}/>
             </Box>
           </Grid>
 
