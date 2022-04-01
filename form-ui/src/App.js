@@ -8,7 +8,6 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
   return (
     <>
-      <body>
       <BrowserRouter>
         <Routes>
           <Route path='' element={<HomePage/>}/>
@@ -17,8 +16,6 @@ function App() {
           <Route path='/home' element={<Home/>}/>
         </Routes>
       </BrowserRouter>
-      </body>
-
     </>
   );
 }
