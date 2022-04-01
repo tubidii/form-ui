@@ -1,6 +1,5 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -10,8 +9,7 @@ import {Link} from "react-router-dom";
 
 export default function LandingHeader() {
   return (
-    <Box sx={{flexGrow: 1, boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"}}>
-      <AppBar color={"transparent"} sx={{boxShadow:"none"}} position="sticky">
+      <AppBar  sx={{backgroundColor:"rgba(255,255,255,0.3)",boxShadow:"none",width:"100vw"}} position="sticky">
         <Toolbar>
           <IconButton
             size="large"
@@ -45,6 +43,5 @@ export default function LandingHeader() {
           </Link>
         </Toolbar>
       </AppBar>
-    </Box>
   );
 }
