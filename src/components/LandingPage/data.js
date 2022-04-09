@@ -4,6 +4,7 @@ export const events = [
     title: "We The Medicine - Healing Our Inner Child 2022",
     tagLine: "Body ,Mind and Soul",
     imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F192974469%2F124429251107%2F1%2Foriginal.20211129-000629?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C83%2C794%2C397&s=ec03d6f0530c16ede18ae70191cebea6",
+    
     price: 210
   },
   {

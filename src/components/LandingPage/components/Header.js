@@ -23,7 +23,7 @@ export default function LandingHeader() {
           <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
             FormBuzz
           </Typography>
-          <Link to = '' style={{textDecoration:'none'}}>
+          <Link to = '/home' style={{textDecoration:'none'}}>
               <Typography variant="p" style={{marginRight:"2rem"}} >
                   Home
               </Typography>

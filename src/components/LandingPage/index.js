@@ -8,9 +8,13 @@ import {TextField} from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import {Search} from "@mui/icons-material";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
 
 
 export default function Home() {
+  const { id } = useParams()
   return (
     <>
       <Header/>
@@ -34,15 +38,19 @@ export default function Home() {
           <Grid container spacing={1}>
             {
               events.map(
-                ({title, tagLine, imageUrl, price}) => {
+                ({id, title, tagLine, imageUrl, price}) => {
+                  
                   return (
                     <Grid item xs={3}>
-                      <EventCard
+                      <Link to={`details/${id}`} style={{textDecoration:'none'}}><EventCard
                         title={title}
                         tagLine={tagLine}
                         price={price}
-                        imageUrl={imageUrl}/>
+                        id={id}
+                        imageUrl={imageUrl}/> </Link>
+                        
                     </Grid>
+                    
                   )
                 }
               )
