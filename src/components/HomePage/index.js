@@ -134,10 +134,10 @@ export default function HomePage() {
       <TopInfoSection/>
       <ChooseUsSection/>
       <StorySection/>
-      <Events/>
+      {/* <Events/> */}
       <WhatTheySay/>
-      <GallerySection/>
-      <Blog/>
+      {/* <GallerySection/>
+      <Blog/> */}
       <Footer/>
     </div>
 

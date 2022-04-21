@@ -116,7 +116,7 @@ function InputWithIcon({setToken}) {
           </div>
           <div id="btns">
             <Button id='login-btn' variant="contained">Log In</Button>
-            <Link exact to = '/sign-up'><Button style={{marginTop: '10px', marginLeft: '5px'}} variant="outlined">Sign up</Button>
+            <Link exact to = '/sign-up'><Button style={{marginTop: '10px', marginLeft: '5px', textDecoration:'none'}} variant="outlined">Sign up</Button>
             </Link>
           </div>
           <p style={{fontSize: 'x-small'}}><a href='#' style={{color: 'red'}}>Forgot password?</a></p>
